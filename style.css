@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* GENERAL STYLING */
+body{
+    padding: 10px;
+    background-color: rgb(241, 241, 241);
+}
+
+#wrap{
+    height: 95vh;
+    width: 100%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    box-shadow: rgb(209, 208, 208) 2px 2px 10px;
+    
+}
+#signupPage{
+    height: 95vh;
+    width: 100%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow-x: hidden;
+    box-shadow: rgb(209, 208, 208) 2px 2px 10px;
+    background-color: rgb(15, 15, 15);
+    background-image: url(img/pngwing.png);
+    background-position:top;   
+    background-repeat: no-repeat;
+    transition: all .5s ease;
+}
+
+#loginPage{
+    height: 95vh;
+    width: 100%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow-x: hidden;
+    box-shadow: rgb(209, 208, 208) 2px 2px 10px;
+    background-color: rgb(15, 15, 15);
+    background-image: url(img/pngwing.png);
+    background-position:top;   
+    background-repeat: no-repeat;
+    transition: all .5s ease;
+}
+#firstCart{
+    height: 95vh;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+    overflow-x: hidden;
+    box-shadow: rgb(209, 208, 208) 2px 2px 10px;
+    background-color: rgb(39, 38, 34);
+   background-image: url(img/bubbles.png);
+    background-position:bottom;   
+    background-repeat: no-repeat;
+    transition: all .5s ease;
+    background-position-y: -100px;
+    position: relative;
+}
+#firstCartOverlay{
+    height:80vh;
+    width: 100%;
+    border-radius: 30px;
+   
+    display: flex;
+    overflow-x: hidden;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+
+    background-position:top;   
+    background-repeat: no-repeat;
+    transition: all .5s ease;
+}
+
+#screenMsg{  
+display: none;
+text-align: center;
+ }
+
+
+
+ /* FIRST PAGE */
+ 
+.frontTxt {
+margin-top: 60px;
+}
+.frontTxt p{
+width: 80%;
+margin: 0 auto;
+   }
+.frontBtn{
+ border: none;
+ transition: all .3s ease;
+ }
+ .frontBtn,.signupBtn,.loginBtn{
+    background-color: rgb(248, 56, 8);
+    color: white;
+    border: 0;
+}
+.frontBtn:hover,.signupBtn:hover,.loginBtn:hover{
+    background-color: rgb(212, 166, 15);
+}
+
+
+/* FOOD LIST */
+
+.foodList img{
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+/* //////////////////////////MEDIA QUERY//////////////////////////////////// */
+
+@media (min-width:391px) {
+      #screenMsg{  
+        display: block;
+        color: rgb(255, 255, 255);
+       }
+       #wrap,#signInPage{
+        background-color: rgb(255, 14, 14);
+    }
+    .mainApp{
+        display: none;
+    }
+   
+}
