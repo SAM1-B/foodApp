@@ -134,7 +134,7 @@ margin: 0 auto;
 
 /* //////////////////////////MEDIA QUERY//////////////////////////////////// */
 
-@media (min-width:391px) {
+@media (min-width:768gitpx) {
       #screenMsg{  
         display: block;
         color: rgb(255, 255, 255);
