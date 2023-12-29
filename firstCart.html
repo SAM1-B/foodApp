@@ -9,23 +9,63 @@
 
 </head>
 <body>
-    
-    <div id="firstCart">
-        <h1 id="screenMsg">NOT AVAILABLE FOR THIS SCREEN SIZE</h1>
-        
-        <div id="firstCartOverlay" class="p-4 ">
-             <!-- <h6 class="mt-4 text-danger">Food <img src="img/right.png"width="20" alt="" style="margin-left: -5px; font-size: 10px;"></h6>
-              -->
-             <div class="foodList mt-5 d-flex justify-content-between">
-                <div class="foodWrap"><img src="img/food1.png" alt=""></div>
-                <div><p>Fried rice and  two chickens</p> <p>#2000</p></div>
-                <div>+ -</div>
+    <div id="cartBox"> 
+      <div id="total" class="d-flex  "><p>Total</p> <label id="totalAmount"></label></div> 
 
-             </div>
-
-        </div>
+      <!-- Cart Buttons (CLOSE & BUY) -->
+      <div class="buttons">
+       <button class="me-4" onclick="cartClose()">Close</button>
+        <button>Buy</button>
+      </div>
     </div>
 
+    <!--  -->
+    <div id="firstCart">  
+        <div class="HomeLogoutCart  text-end pe-5 text-white mt-5 "> 
+          <span class=" me-4">Logout</span>
+          <span class="cart" onclick="cartOpen()"><img src="img/shop.png" alt=""  class="img-fluid bg-warning p-2 rounded-5" > 
+            <span class=" p-1 rounded-5 cartCount " id="cartCount" style="font-size: 10px;"></span>
+          </span>
+        </div>  <br>
+        <div id="firstCartOverlay" class="p-4  ">
+             <div class="foodList">
+                <div class="foodWrap">
+                
+                <div class="row gap-4 justify-content-center">
+                <div class=" img-thumbnail foodBorder px-4 pb-3 col-5 col-md-3 col-lg-2">
+                <img src="img/food1.png" alt=""  class="img-fluid">
+                <p class="foodTitle">Fried rice and   two chickens</p> <p class="foodPrice"><b class="text-success">#2000</b></p>
+                <button class="addToCartBtn  " onclick="addToCartBtn1(1)">Add</button>
+                </div>
+                <div class=" img-thumbnail foodBorder px-4 pb-3 col-5 col-md-3 col-lg-2">
+                  <img src="img/food5.png" alt=""  class="img-fluid">
+                  <p class="foodTitle"> chickens</p> <p class="foodPrice"><b class="text-success">#1500</b></p>
+                  <button class="addToCartBtn  " onclick="addToCartBtn2(1)">Add</button>
+                  </div>
+                  <div class=" img-thumbnail foodBorder px-4 pb-3 col-5 col-md-3 col-lg-2">
+                    <img src="img/food1.png" alt=""  class="img-fluid">
+                    <p class="foodTitle">Fried rice and   two chickens</p> <p class="foodPrice"><b class="text-success">#2000</b></p>
+                    <button class="addToCartBtn  " onclick="addToCartBtn3(1)">Add</button>
+                    </div>
+                    <div class=" img-thumbnail foodBorder px-4 pb-3 col-5 col-md-3 col-lg-2">
+                    <img src="img/food1.png" alt=""  class="img-fluid">
+                    <p class="foodTitle">Fried rice and   two chickens</p> <p class="foodPrice"><b class="text-success">#2000</b></p>
+                    <button class="addToCartBtn  " onclick="addToCartBtn4(1)">Add</button>
+                    </div>
+
+              </div>
+
+
+                <div class="moreBtn   my-3">
+                  <button class=" border-0 position-absolute bottom-0  text-light bg-danger px-3"> More</button>
+                </div>
+                
+
+                </div>
+             </div>
+       </div>
+
     <script src="bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

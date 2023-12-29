@@ -2,19 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+ 
 }
 
 
 /* GENERAL STYLING */
 body{
-    padding: 10px;
+   
     background-color: rgb(241, 241, 241);
+   
 }
 
 #wrap{
-    height: 95vh;
+    height: 100vh;
     width: 100%;
-    border-radius: 20px;
+   
     justify-content: center;
     align-items: center;
     display: flex;
@@ -24,9 +26,8 @@ body{
     
 }
 #signupPage{
-    height: 95vh;
+    height: 100vh;
     width: 100%;
-    border-radius: 20px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -40,9 +41,8 @@ body{
 }
 
 #loginPage{
-    height: 95vh;
+    height:100vh;
     width: 100%;
-    border-radius: 20px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -55,17 +55,16 @@ body{
     transition: all .5s ease;
 }
 #firstCart{
-    height: 95vh;
+    height: 100vh;
     width: 100%;
-    border-top-right-radius: 20px;
+    /* border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    
+    border-bottom-left-radius: 30px; */
     overflow-x: hidden;
-    box-shadow: rgb(209, 208, 208) 2px 2px 10px;
-    background-color: rgb(39, 38, 34);
-   background-image: url(img/bubbles.png);
+    box-shadow: rgb(209, 209, 208) 2px 2px 10px;
+    background-color: rgb(56, 49, 49);
+    background-image: url(img/bubbles.png);
     background-position:bottom;   
     background-repeat: no-repeat;
     transition: all .5s ease;
@@ -75,17 +74,17 @@ body{
 #firstCartOverlay{
     height:80vh;
     width: 100%;
-    border-radius: 30px;
-   
+    /* border-radius: 30px; */
     display: flex;
-    overflow-x: hidden;
+    overflow: hidden;
     position: absolute;
     bottom: 0;
+  
     background-color: rgb(255, 255, 255);
-
     background-position:top;   
     background-repeat: no-repeat;
     transition: all .5s ease;
+    overflow-y: scroll;
 }
 
 #screenMsg{  
@@ -117,15 +116,78 @@ margin: 0 auto;
     background-color: rgb(212, 166, 15);
 }
 
+/* Cart */
+.HomeLogoutCart span:hover{
+    cursor: pointer;
+    color: rgb(243, 189, 9);
+}
+.cart{
+    position: relative;
+}
+.cartCount{
+    position: absolute;
+    margin-left: -15px;
+    margin-top: 10px;
+    margin-top: 20px;
+    background-color: red;
+}
 
 /* FOOD LIST */
 
-.foodList img{
-    width: 50%;
+.foodTitle, .foodPrice{
+    font-size: 18px;
+    text-align: center;
+}
+.foodSpread{
+    justify-content: space-around;
+}
+.addToCartBtn{
+    background-color: rgb(207, 9, 9);
+    border: none;
+    color: white;
+   width: 100%;
+    font-size: 16px;
+}
+.addToCartBtn:hover{
+    background-color: green;
+}
+#total{
+   margin-left: 60px;
+   position: absolute;
+   bottom: 60px;
+}
+#total p{
+  margin-right: 60px;
+ }
+
+/* CART BOX */
+
+#cartBox{
+    width: 300px;
+    height: 80vh;
+    position: absolute;
+    background-color: rgba(240, 159, 8, 0.945);
+    z-index: 1000;
+    right: 0;
+    bottom: 0;
+    display: none;
+    padding: 20px;
+}
+/* CartBox List From Cart */
+#cartBox li{
+    list-style: none;
 }
 
-
-
+.buttons{
+    display: flex;
+   position:absolute;
+    bottom: 20px;
+    margin-left: 50px;
+}
+#cartBox button{
+    padding: 8px 20px;
+    border: 0;
+}
 
 
 
@@ -134,8 +196,10 @@ margin: 0 auto;
 
 /* //////////////////////////MEDIA QUERY//////////////////////////////////// */
 
-@media (min-width:768gitpx) {
-      #screenMsg{  
+
+
+@media (min-width:768px) {
+      /* #screenMsg{  
         display: block;
         color: rgb(255, 255, 255);
        }
@@ -144,6 +208,15 @@ margin: 0 auto;
     }
     .mainApp{
         display: none;
+    }    */
+}
+
+@media (max-width:767px) {
+    .foodTitle, .foodPrice{
+        font-size: 12px;
     }
-   
+    .foodSpread{
+        justify-content: space-between;
+    }
+ 
 }
